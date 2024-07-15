@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Risultato dell'invio delle email</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+            h1 {
+                color: rgb(0, 0, 0);
+            }
+            ul {
+                width: 40%
+            }
+            .message {
+                margin: 10px 0;
+                padding: 10px;
+                border-radius: 5px;
+            }
+            .success {
+                background-color: #d4edda;
+                color: #155724;
+                border: 1px solid #c3e6cb;
+            }
+            .error {
+                background-color: #f8d7da;
+                color: #721c24;
+                border: 1px solid #f5c6cb;
+            }
+            .button {
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #007bff;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 5px;
+            }
+
+            .button:hover {
+                background-color: #0056b3;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Risultato dell'invio delle email</h1>
+        <a href="/" class="button">Torna alla Home</a>
+        <ul>
+            {% for message in messages %}
+                <li class="message {{ 'success' if 'successo' in message else 'error' }}">
+                    {{ message }}
+                </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

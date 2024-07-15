@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333333;
+        }
+        .container {
+            width: 100%;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* Nasconde lo scorrimento sia orizzontale che verticale */
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            width: 130px;
+        }
+        .content {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .content p {
+            margin: 10px 0;
+        }
+        .content ul {
+            padding: 0;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 20px; /* Aggiunge un padding sinistro per separare dall'inizio del paragrafo */
+        }
+        .content ul li {
+            margin-bottom: 5px;
+            list-style-type: disc; /* Utilizza i punti come stile di elenco */
+        }
+        .content a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777777;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="URL LOGO AZIENDA" alt="Logo Azienda">
+        </div>
+        <div class="content">
+            <p>Gentile {{ body.name }},</p>
+            <p>Ora puoi connetterti alla rete Wi-Fi: <strong>{{ body.ssid }}</strong></p>
+            <p>Ecco le tue credenziali d'accesso:</p>
+            <ul>
+                <li>Username: <strong>{{ body.username }}</strong></li>
+                <li>Password: <strong>{{ body.password }}</strong></li>
+            </ul>
+            <p>Per vedere il tutorial clicca qui: <a href="LINK TUTORIAL">Come connettersi alla Wi-Fi</a></p>
+        </div>
+        <div class="footer">
+            <p>Questa è un'email autogenerata, per favore non rispondere.</p>
+            <p>Grazie,<br>
+            Il Team NOME AZIENDA</p>
+        </div>
+    </div>
+</body>
+</html>
